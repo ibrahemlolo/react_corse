@@ -4,11 +4,14 @@ export default function App() {
      const [Ibra, setIbra] = React.useState(true)
      function Taggle() {
           setIbra(prev => !prev)
-          console.log(String(Ibra))     
+          console.log(String(Ibra))
+     }
+     function color() {
+          return Ibra ? "gold" : ""
      }
      return (
-          <div style={{ fontSize:"20px", textAlign:"center" }}>
-               <h1 onClick={Taggle}>{ Ibra ? "Yes":"No" }</h1>
+          <div style={{ fontSize: "40px", textAlign: "center" }} >
+               <i className="fa-solid fa-star" onClick={Taggle} style={{ color: color() }}></i>
           </div>
      )
 }

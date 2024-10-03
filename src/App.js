@@ -1,17 +1,41 @@
-import React from "react"
+import React, { useState } from "react"
 
 export default function App() {
-     const [Ibra, setIbra] = React.useState(true)
-     function Taggle() {
-          setIbra(prev => !prev)
-          console.log(String(Ibra))
-     }
-     function color() {
-          return Ibra ? "gold" : ""
-     }
+     const [FirstName, setFirstName] = useState()
+     const [LastName, setLastName] = useState()
+     const [Email, setEmail] = useState()
+     console.log(FirstName)
+
      return (
-          <div style={{ fontSize: "40px", textAlign: "center" }} >
-               <i className="fa-solid fa-star" onClick={Taggle} style={{ color: color() }}></i>
+          <div >
+               <form action="">
+                    <label htmlFor='1'> First Name :</label>
+                    <input id="1"
+                         type="text"
+                         placeholder={FirstName}
+                         value={FirstName}
+                         onChange={(event) => setFirstName(event.target.value)}
+                         required/>
+                    <label htmlFor='2'> Last Name :</label>
+                    <input
+                         id="2"
+                         type="text"
+                         placeholder={LastName}
+                         value={LastName}
+                         onChange={(event)=>setLastName(event.target.value)}
+                         required />
+                    <label htmlFor='3'> Email :</label>
+                    <input
+                         id="3"
+                         type="email"
+                         placeholder={Email}
+                         value={Email}
+                         onChange={(event)=>setEmail(event.target.value)}
+                         required />
+                    <button type="submit">submit</button>
+               </form>
+
           </div>
+
      )
 }

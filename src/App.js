@@ -1,16 +1,14 @@
-import { useEffect } from "react"
+import SignUp from "./components/SignUp"
+import Header from "./components/Header"
 
 export default function App() {
-     useEffect(() =>
-     {
-          fetch('https://api.imgflip.com/get_memes')
-               .then((res) => res.json())
-               .then((data) => console.log(data.data.memes.map((item)=> item.name)))}
-     )
-     return (
-          <div >
-               
-          </div>
 
-     )
+
+     return (
+        <div>
+             <Header/>
+             <SignUp/>  
+          </div>)
+
+
 }

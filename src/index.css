@@ -8,7 +8,7 @@ body {
     font-family: "Cairo", sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-      background-color: #080710;
+      background-color: #ffffff;
 }
 
 code {
@@ -61,4 +61,13 @@ code {
   font-size:15px;
 
   color: red;
+  }
+
+  .regester{
+        color: #ddd;
+    display: block;
+    padding: 0 6px;
+    border: 1px solid #111;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--ttfunction);
   }

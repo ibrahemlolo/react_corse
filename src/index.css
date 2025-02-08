@@ -17,6 +17,7 @@ code {
  
 
 }
+
 /* SignUp Style */
 
 .father{
@@ -47,7 +48,7 @@ code {
 
 .father form input{
   margin: 10px;
-    padding: 10px;
+  padding: 10px;
 }
 .father form h3{
       font-size: 32px;
@@ -64,10 +65,44 @@ code {
   }
 
   .regester{
-        color: #ddd;
+    color: #ddd;
     display: block;
     padding: 0 6px;
     border: 1px solid #111;
     transition-duration: var(--duration);
     transition-timing-function: var(--ttfunction);
   }
+
+  .regester button {
+    outline: none;
+    border: none;
+    background-color: #86b7fe;
+    padding: 10px 20px;
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid white;
+    font-weight: bold;
+  
+}
+
+.regester button::hover { 
+  background-color: white;
+  border: 2px solid white;
+  color: #86b7fe;
+}
+
+
+.password-input {
+  display: flex;
+  align-items: center;
+}
+
+.password-input input {
+  flex-grow: 1;
+}
+
+.password-input button {
+  margin-left: 10px;
+}

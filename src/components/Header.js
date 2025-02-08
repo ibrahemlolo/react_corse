@@ -1,11 +1,31 @@
+import { Link } from "react-router-dom"
+
 export default function Header() {
      return (
-               <nav>
-                    <h6>Home</h6>
-                    <h6>About</h6>
-                    <div style={{ textAlign: "center"}} className="regester">
+          <nav
+               style={{
+                    display: "flex",
+                    alignContent: "center",
+                    justifyContent: "space-between",
+               }}
+               className="regester"
+          >
+               <div>
+                    <button className="regester">Home</button>
+                    <button className="regester">About</button>
+               </div>
+               <div>
+                    <Link
+                         to="/regester"
+                         style={{ textAlign: "center" }} className="regester">
                          Regester
-                    </div>
-               </nav>
+                    </Link>
+                    <Link
+                         to='/login'
+                         style={{ textAlign: "center" }} className="regester">
+                         login
+                    </Link>
+               </div>
+          </nav>
      )
 }

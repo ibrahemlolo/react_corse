@@ -64,16 +64,13 @@ code {
   color: red;
   }
 
-  .regester{
+.regester{
     color: #ddd;
-    display: block;
-    padding: 0 6px;
+    padding: 10px 6px;
     border: 1px solid #111;
-    transition-duration: var(--duration);
-    transition-timing-function: var(--ttfunction);
   }
 
-  .regester button {
+.regester button {
     outline: none;
     border: none;
     background-color: #86b7fe;
@@ -86,6 +83,22 @@ code {
     font-weight: bold;
   
 }
+.reglink {
+    outline: none;
+    border: none;
+    background-color: #86b7fe;
+    padding: 3px 10px 5px 10px;
+    color:white;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: 0.3s;
+    border: 2px solid white;
+    font-weight: bold;
+    text-decoration: none;
+  
+  }
+
+
 
 .regester button::hover { 
   background-color: white;

@@ -28,17 +28,22 @@ export default function SignUp() {
           try {
                if (flag) {
                     //send Data
-                    await axios.post("http://127.0.0.1:8000/api/register", {
+                    let res = await axios.post("http://127.0.0.1:8000/api/register", {
                          name: name,
                          email: email,
                          password: password,
                          password_confirmation: repassword,
                     });
+                    if (res.status === 200) {
+                         window.localStorage.setItem("email", email);
+                         window.location.pathname = "/";
+                    }
                }
           } catch (err) {
                setEmailerror(err.response.status)
 
           }
+          
      }
 
 

@@ -32,7 +32,7 @@ code {
     align-items: center;
     flex-direction: column;
     margin: 10px;
-        height: 520px;
+    height: 520px;
     width: 400px;
     background-color: rgba(255, 255, 255, 0.13);
     position: absolute;
@@ -118,4 +118,10 @@ code {
 
 .password-input button {
   margin-left: 10px;
+}
+.d-flex{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  
 }

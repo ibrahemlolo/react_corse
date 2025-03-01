@@ -1,12 +1,13 @@
-import SignUp from "./components/SignUp"
-import Login from "./components/Login"
-import Home from "./components/Home"
-import Users from "./Users"
+import SignUp from "./Pages/website/Auth/SignUp";
+import Login from "./Pages/website/Auth/Login"
+import Home from "./Pages/website/Home"
+import Users from "./Pages/Dashboard/users/Users"
 // import { useEffect, useState } from "react"
 // import Name from "./components/Name"
 import { Route, Routes } from "react-router-dom"
-import Dashboard from "./Dashboard"
-import UpdataUser from "./UpdateUser"
+import Dashboard from "./Pages/Dashboard/Dashboard"
+import UpdataUser from "./Pages/Dashboard/users/UpdateUser"
+import Create from "./Pages/Dashboard/users/Create"
 
 
 export default function App() {
@@ -14,7 +15,7 @@ export default function App() {
 
 
    return (
-      <div>
+      <div >
 
 
          <Routes>
@@ -22,8 +23,9 @@ export default function App() {
             <Route path='/regester' element={<SignUp />} />
             <Route path='/login' element={<Login />} />
             <Route path='/dashboard' element={<Dashboard />}>
-               <Route exact path="users" element={<Users />}/>
-               <Route path="users/:id" element={<UpdataUser />}/>
+               <Route exact path="users" element={<Users />} />
+               <Route exact path="create" element={<Create />} />
+               <Route path="users/:id" element={<UpdataUser />} />
             </Route>
          </Routes>
 

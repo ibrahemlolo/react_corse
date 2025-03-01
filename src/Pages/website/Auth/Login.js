@@ -1,8 +1,9 @@
 
 import axios from "axios";
 import { useState } from "react";
-import  Header  from "./Header";
-
+import Header from "../../../components/Header";
+import { User } from "../Context/Context";
+import { useContext } from "react";
 export default function SignUp() {
 
      const [email, setEmail] = useState("");
@@ -12,6 +13,8 @@ export default function SignUp() {
      const [passerror, setpasserror] = useState("");
      const [showPassword, setShowPassword] = useState(false);
 
+     const userNow = useContext(User);
+          console.log(userNow);
 
      // console.log(flag)
 
@@ -20,7 +23,7 @@ export default function SignUp() {
           e.preventDefault();
           setAccept(true);
 
-          if ( password.length < 8 ) {
+          if (password.length < 8) {
                flag = false;
           }
           else flag = true;
@@ -33,7 +36,7 @@ export default function SignUp() {
                     });
                     if (res.status === 200) {
                          window.localStorage.setItem("email", email);
-                         window.location.pathname = "/home";
+                         window.location.pathname = "/";
                     }
                }
           } catch (err) {
@@ -43,14 +46,23 @@ export default function SignUp() {
      }
 
 
-     return (<div> <Header/>
-          <div className="father">
-              
+     return (<div> <Header />
+          <div>
+
                <div className="shape"></div>
-               <form onSubmit={Submit}>
+               <form onSubmit={Submit}
+                    className=""
+                    style={{
+                         // top: '50 %',
+                         // left: '50 %',
+                         // alignItems: "center",
+                         // boxShadow: '0 0 40px rgba(8, 7, 16, 0.6)',
+                         // padding: '50px 35px',
+                         // justifyContent: 'center',
+                    }}>
                     <h4>Login Here </h4>
 
-                  
+
                     {/* Email */}
                     <label htmlFor="email">Email</label>
                     <input id="email"
@@ -59,7 +71,7 @@ export default function SignUp() {
                          value={email}
                          onChange={(e) => setEmail(e.target.value)} />
 
-                    
+
 
                     {/* Password */}
                     <label htmlFor="password">Password</label>

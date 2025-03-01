@@ -38,7 +38,8 @@ export default function Header() {
                          style={{ textAlign: "center",  }} className="reglink">
                          login
                     </Link>
-                    </div>) :(
+                         </div>) :
+                         (
                          <div
                               // to='/logout'
                               style={{ textAlign: "center", }} className="reglink"

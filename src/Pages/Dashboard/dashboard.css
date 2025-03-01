@@ -4,7 +4,9 @@
 display: flex;
 
 }
-
+.fa-solid{
+  color: #1E3050;
+}
 
 
 /* Top-Bar */
@@ -19,6 +21,9 @@ box-shadow: 1px 1px 5px 1px #c2c2c2;
      height: 100vh;
      padding: 10px;
      border-right: 1px solid #c2c2c2;
+     display: flex;
+     align-content: center;
+     flex-direction: column;
 
 }
 
@@ -26,6 +31,25 @@ box-shadow: 1px 1px 5px 1px #c2c2c2;
      color: black;
      text-decoration: none;
      font-size: 20px;
+     padding-bottom: 8px;
+     transition: 0.4s;
+     -webkit-transition: 0.4s;
+     -moz-transition: 0.4s;
+     -ms-transition: 0.4s;
+     -o-transition: 0.1s;
+}
+.item-link:hover{
+  background-color: #74afb99f;
+  border-radius:12px ;
+  -webkit-border-radius:12px ;
+  -moz-border-radius:12px ;
+  -ms-border-radius:12px ;
+  -o-border-radius:12px ;
+}
+.active{
+    background-color: #74afb99f;
+  border-radius:12px ;
+
 }
 
 /* Table-CSS */
@@ -55,3 +79,8 @@ table{
  }
 
 
+.fa-solid{
+  color: #1E3050;
+  margin: 8px;
+  padding-right: 10px;
+  }

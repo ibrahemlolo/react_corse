@@ -2,16 +2,22 @@ import React from 'react';
 import ReactDOM from 'react-dom/client';
 import './index.css';
 import './Assets/all.min.css'
-import './dashboard.css'
+import './Pages/Dashboard/dashboard.css'
 import App from './App';
-import {BrowserRouter} from 'react-router-dom';
+import {BrowserRouter as Router} from 'react-router-dom';
+import UserProvider from './Pages/website/Context/Context';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <App />
-  </BrowserRouter>
+    
+  <Router>
+    <UserProvider>
+      <App />
+    </UserProvider>
+  </Router>
+  
+
 );
 
 // If you want to start measuring performance in your app, pass a function

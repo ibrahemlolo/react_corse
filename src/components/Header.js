@@ -5,10 +5,7 @@ export default function Header() {
 
      // const [logout, setlougout]= useState(false);
      
-     function handleLogout() {
-          window.localStorage.removeItem("email");
-          window.location.pathname = "/";
-     }
+    
 
      return (
           <nav
@@ -26,8 +23,7 @@ export default function Header() {
                     <button className="regester">About</button>
                </div>
                <div>
-               {!window.localStorage.getItem("email") ?
-               (<div>
+               
                     <Link
                          to="/regester"
                          style={{ textAlign: "center" }} className="reglink">
@@ -38,14 +34,14 @@ export default function Header() {
                          style={{ textAlign: "center",  }} className="reglink">
                          login
                     </Link>
-                         </div>) :
-                         (
-                         <div
+                        
+                         
+                         {/* <div
                               // to='/logout'
                               style={{ textAlign: "center", }} className="reglink"
                               onClick={handleLogout}>
                               Logout
-                              </div>)}
+                              </div>) */}
                </div>
           </nav>
      )

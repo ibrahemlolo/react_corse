@@ -10,7 +10,6 @@ export default function SignUp() {
           <Form
                Title="Register"
                endpoint="register"
-               target=""
                isStyle={true}
 
 

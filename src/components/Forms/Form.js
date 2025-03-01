@@ -2,8 +2,9 @@ import axios from "axios";
 import { useState, useEffect, useContext } from "react";
 import "./index.css";
 import { User } from "../../Pages/website/Context/Context";
-export default function Form(props) {
 
+
+export default function Form(props) {
      const [name, setName] = useState("");
      const [email, setEmail] = useState("");
      const [password, setPassword] = useState("");
@@ -13,7 +14,8 @@ export default function Form(props) {
      const [emailerror, setEmailerror] = useState("");
      const [showPassword, setShowPassword] = useState(false);
 
-     
+     const userNow = useContext(User);  
+     console.log(userNow);
 
      const FormStyles = {
           top: '50 %',
@@ -24,6 +26,8 @@ export default function Form(props) {
           justifyContent: 'center',
      }
 
+
+    
      //for Update return name and email
      useEffect(() => {
           setName(props.name);
@@ -40,17 +44,20 @@ export default function Form(props) {
                     password: password,
                     password_confirmation: repassword,
                });
-               User.setAuth( )
+               const Token = res.data.token;
+               const userDetails = res.data.data.user;
+               console.log(Token);
+               console.log(userDetails);
+               userNow.setAuth("stored");
+              
 
           } catch (err) {
-                setEmailerror(err.response.status)
-
+               setEmailerror(err.response.status);
           }
 
 
      }
-     const userNow = useContext(User);
-          console.log(userNow);
+     
 
      return (<div>
           <div style={{}} className="father">
